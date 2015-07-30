@@ -8,5 +8,8 @@ namespace Emanuel007BarlaPoo1\route;
  * @author emanuel
  */
 class routeClass {
-    //put your code here
+     static public function redirect($url) {    
+    header('Location: ' . $url);
+    exit();
+  }
 }
