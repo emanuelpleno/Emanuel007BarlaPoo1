@@ -11,10 +11,9 @@ $user = petition::getParamPost('user');
 $pass = petition::getParamPost('password');
 
 if (authenticity::verifyUserAndPassword($user, $pass) === true) {
-  route::redirect('../mainMenu.php');
+  route::redirect('../template/menu.php');
 } else {
-  //header('Location: ../index.php');
-  //exit();
+  
   route::redirect('../index.php?user=false');
 }
 
